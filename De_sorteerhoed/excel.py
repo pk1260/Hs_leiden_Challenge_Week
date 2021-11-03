@@ -1,6 +1,6 @@
+
 import openpyxl
 
-# Locatie Vragen
 path = "Vragen.xlsx"
 
 # Werkblad openen
@@ -18,13 +18,12 @@ while Vragen < 18:
     Rij += 1
     Kolom = 2
     Antwoord = 0
-    Vragen +=1
-    while Kolom< 7:
+    Vragen += 1
+    while Kolom < 7:
         Question = sheet_obj.cell(row=Rij, column=Kolom)
-        print(Question.value)
+
         Antwoord += 1
         Kolom += 1
-
 
 # wat hierboven gebeurd is dat er gevraagd wordt zoek in Rij  en Kolom dan kom je dus uit bij een specefieke cell deze
 # cell is in het eerste geval de vraag en de rest zijn de antwoorden
