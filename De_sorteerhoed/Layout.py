@@ -2,7 +2,7 @@
 from tkinter import *
 from tkinter.ttk import *
 import openpyxl
-  path = "Vragen.xlsx"
+path = "Vragen.xlsx"
 # Creating master Tkinter window
 master = Tk()
 master.geometry('175x175')
@@ -21,7 +21,7 @@ style.configure("TRadiobutton", background = "green",
  
 # Dictionary to create multiple buttons
 
- wb_obj = openpyxl.load_workbook(path)
+wb_obj = openpyxl.load_workbook(path)
 sheet_obj = wb_obj.active
 
 
