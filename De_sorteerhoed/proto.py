@@ -16,7 +16,7 @@ def resultaat():
     }
 
 # dictA = {'Sun': 5, 'Mon': 3, 'Tue': 5, 'Wed': 4}
-
+#changes
     print("Given Dictionary :", aantal_lijst)
 
     dictB = {}
