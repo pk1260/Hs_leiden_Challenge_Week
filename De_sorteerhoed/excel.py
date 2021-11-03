@@ -25,5 +25,6 @@ while Vragen < 18:
         Antwoord += 1
         Kolom += 1
 
+        print(Question.value)
 # wat hierboven gebeurd is dat er gevraagd wordt zoek in Rij  en Kolom dan kom je dus uit bij een specefieke cell deze
 # cell is in het eerste geval de vraag en de rest zijn de antwoorden
