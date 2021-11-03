@@ -1,32 +1,29 @@
-
- 
 import openpyxl
- 
-# Give the location of the file
+
 path = "Vragen.xlsx"
- 
-# To open the workbook
-# workbook object is created
+
+# Werkblad openen
+# Werkblad creëeren
 wb_obj = openpyxl.load_workbook(path)
- 
-# Get workbook active sheet object
-# from the active attribute
+
+# pakt het goeie sheet
 sheet_obj = wb_obj.active
- 
-# Cell objects also have a row, column,
-# and coordinate attributes that provide
-# location information for the cell.
- 
-# Note: The first row or
-# column integer is 1, not 0.
- 
-# Cell object is created by using
-# sheet object's cell() method.
-cell_obj = sheet_obj.cell(row = 2, column = 2)
- 
-# Print value of cell object
-# using the value attribute
-print(cell_obj.value)
+Vragen = int(0)
+Antwoord = int(0)
+Rij = 2
+Kolom = 2
+# Er zijn 18 vragen dus vragen kleiner dan 18
+while Vragen < 18:
+    Rij += 1
+    Kolom = 2
+    Antwoord = 0
+    Vragen += 1
+    while Kolom < 7:
+        Question = sheet_obj.cell(row=Rij, column=Kolom)
 
+        Antwoord += 1
+        Kolom += 1
 
-
+        print(Question.value)
+# wat hierboven gebeurd is dat er gevraagd wordt zoek in Rij  en Kolom dan kom je dus uit bij een specefieke cell deze
+# cell is in het eerste geval de vraag en de rest zijn de antwoorden
